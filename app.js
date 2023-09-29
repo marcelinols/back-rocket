@@ -7,10 +7,10 @@ const port = 3001;
 
 // mysql connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'adivinas',
-    database: 'rocket_test',
+    host: 'data-avimo.cgriqmyweq5c.us-east-2.rds.amazonaws.com',
+    user: 'testing',
+    password: 'Pruebas%ALI%2020',
+    database: 'testing_ali_fullstack',
 });
 
 // connect to mysql
@@ -53,7 +53,7 @@ app.post('/api/users', (req, res) => {
     };
      
     db.query(
-        'INSERT INTO users SET ?',
+        'INSERT INTO users_test_marcelinols SET ?',
         newUser, (err, result) => {
         if (err) {
             console.error('Error inserting user:', err);
