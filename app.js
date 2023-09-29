@@ -69,7 +69,7 @@ app.post('/api/users', (req, res) => {
 
 // Get all users
 app.get('/api/users', (req, res) => {
-    db.query('SELECT * FROM users', (err, results) => {
+    db.query('SELECT * FROM users_test_marcelinols', (err, results) => {
         if (err) {
             console.error('Error fetching users:', err);
             res.status(500).json({ error: 'Error fetching users' });
